@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(py --version)",
+      "Bash(py -m pip install -r requirements.txt)",
+      "Bash(netstat -ano)",
+      "Bash(findstr :3000)",
+      "Bash(findstr LISTENING)",
+      "Bash(PYTHONPATH=src py -m uvicorn mcp_gateway.app:app --host 0.0.0.0 --port 3001)",
+      "Bash(curl -s http://localhost:3001/health)",
+      "Bash(py -m pip install -e .)",
+      "Bash(py -m uvicorn mcp_gateway.app:app --host 0.0.0.0 --port 3000)",
+      "Bash(findstr \":3000\\\\|:3001\")"
+    ]
+  }
+}
